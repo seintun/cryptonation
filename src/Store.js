@@ -9,10 +9,12 @@ import promise from 'redux-promise';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
+import RootReducer from './Reducers';
+
 const middleware = applyMiddleware(thunk, promise, logger);
 
-// Add RootReducer as argument when RootReducer is set-up
 const Store = createStore(
+  RootReducer,
   compose(
     middleware, 
     devTools({
