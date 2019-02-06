@@ -8,5 +8,5 @@ export const images = {
   LTC: 'https://res.cloudinary.com/da7jhtpgh/image/upload/v1512427497/ltc_fjbqjf.png',
   TRX: 'https://res.cloudinary.com/da7jhtpgh/image/upload/v1516326885/trx_2x_ukhxjm.png',
   XLM: 'https://res.cloudinary.com/da7jhtpgh/image/upload/v1516326886/xlm_2x_jfwlwt.png',
-  BSV: 'https://coinmarketcap.click/coins_images/bitcoin-cash-sv/large.png'
+  BNB: 'https://coinmarketcap.click/coins_images/bitcoin-cash-sv/large.png'
 };

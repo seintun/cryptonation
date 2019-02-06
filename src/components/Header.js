@@ -17,14 +17,18 @@ const Header = () => {
 const styles = StyleSheet.create({
   headerContainer: {
     display: 'flex',
-    marginTop: 55,
+    paddingTop: 40,
+    paddingBottom: 5,
+    backgroundColor: '#35638d',
     alignItems: 'center'
   },
   header: {
     fontWeight: 'bold',
+    color: 'white',
     fontSize: 20
   },
   subHeader: {
+    color: 'white',
     fontStyle: 'italic'
   }
 })
