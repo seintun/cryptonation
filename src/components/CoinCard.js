@@ -31,9 +31,9 @@ const CoinCard = ({ symbol, coin_name, price_usd, percent_change_24h, percent_ch
       />
       <Text>{ symbol }</Text>
       <Text>{ coin_name }</Text>
-      <Text><Text style={bold}>$</Text>{ price_usd }</Text>
-      <Text>Change past 24 hours: { percent_change_24h }</Text>
-      <Text>Change past 7 days: { percent_change_7d }</Text>
+      <Text>Price: <Text style={bold}>$</Text>{ price_usd.toFixed(2) }</Text>
+      <Text>Change (24h): { percent_change_24h.toFixed(2) }%</Text>
+      <Text>Change (7d): { percent_change_7d.toFixed(2) }%</Text>
     </View>
   )
 };
