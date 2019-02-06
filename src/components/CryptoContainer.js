@@ -5,7 +5,7 @@ import FetchCoinData from '../Actions/FetchCoinData';
 
 class CryptoContainer extends Component {
   componentDidMount(){
-    this.props.FetchCoinData
+    this.props.FetchCoinData();
   }
   render() {
     return(
