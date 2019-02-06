@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderBottomColor: "#e5e5e5",
     borderBottomWidth: 3,
-    padding: 20
+    padding: 8
   },
   upperRow: {
     display: "flex",
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 2,
     padding: 10,
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-between"
   },
   coinSymbol: {
     marginTop: 10,
@@ -52,8 +52,18 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40
   },
-  bold: {
+  moneySymbol: {
     fontWeight: 'bold'
+  },
+  percentChangePlus: {
+    color: "#00BFA5",
+    fontWeight: "bold",
+    marginLeft: 5
+  },
+  percentChangeMinus: {
+    color: "#DD2C00",
+    fontWeight: "bold",
+    marginLeft: 5
   }
 })
 
@@ -68,8 +78,7 @@ const {
   statisticsContainer,
   seperator,
   percentChangePlus,
-  percentChangeMinus,
-  bold
+  percentChangeMinus
 } = styles;
 
 const CoinCard = ({ symbol, coin_name, price_usd, percent_change_24h, percent_change_7d }) => {
@@ -84,12 +93,12 @@ const CoinCard = ({ symbol, coin_name, price_usd, percent_change_24h, percent_ch
         <Text style={seperator}>|</Text>
         <Text style={coinName}>{coin_name}</Text>
         <Text style={coinPrice}>
-          Price: <Text style={bold}>$</Text>{price_usd.toFixed(2)}
+          Price: <Text style={moneySymbol}>$</Text>{price_usd.toFixed(2)}
         </Text>
       </View>
       <View style={statisticsContainer}>
-        <Text>Change (24h): {percent_change_24h.toFixed(2)}%</Text>
-        <Text>Change (7d): {percent_change_7d.toFixed(2)}%</Text>
+        <Text style={percent_change_24h < 0 ? percentChangeMinus : percentChangePlus}>Change (24h): {'\n'} {percent_change_24h.toFixed(2)}%</Text>
+        <Text style={percent_change_7d < 0 ? percentChangeMinus : percentChangePlus}>Change (7d): {'\n'} {percent_change_7d.toFixed(2)}%</Text>
       </View>
     </View>
   )
