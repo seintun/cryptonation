@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
 
 const { headerContainer, header } = styles;
 
-export { Header };
+export default Header;
