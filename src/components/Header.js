@@ -5,7 +5,10 @@ const Header = () => {
   return(
     <View style={ headerContainer }>
       <Text style={ header }>
-          Cryptocurrency App, powered by AJ and Sein
+        CryptoNation
+      </Text>
+      <Text style={ subHeader }>
+        Powered By Sein and AJ
       </Text>
     </View>
   )
@@ -20,9 +23,12 @@ const styles = StyleSheet.create({
   header: {
     fontWeight: 'bold',
     fontSize: 20
+  },
+  subHeader: {
+    fontStyle: 'italic'
   }
 })
 
-const { headerContainer, header } = styles;
+const { headerContainer, header, subHeader } = styles;
 
 export default Header;
