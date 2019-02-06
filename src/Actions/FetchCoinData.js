@@ -7,9 +7,13 @@ import {
 } from '../Utils/ActionTypes';
 
 export default function FetchCoinData() {
-  return disptach => {
+  return dispatch => {
     dispatch({ type: FETCHING_COIN_DATA })
-    return axios.get(`${apiBaseURL}/v1/cryptocurrency/listings/latest?limit=10`)
+    return axios.get(`${apiBaseURL}/v1/cryptocurrency/listings/latest?limit=10`, {
+      headers: {
+        'X-CMC_PRO_API_KEY': apiKey
+      }
+    })
       .then(res => {
         dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: res.data })
       })
