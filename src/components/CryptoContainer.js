@@ -12,9 +12,6 @@ class CryptoContainer extends Component {
 
   renderCoinCards() {
     const { crypto } = this.props;
-
-    console.log(crypto.data, 'inside the render function')
-
     if (crypto.isFetching) {
       return(
         <View>
