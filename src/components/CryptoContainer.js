@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { ScrollView, View } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 import FetchCoinData from '../Actions/FetchCoinData';
-import CoinCard from './CoinCard';
+import { SwitchChat, CoinCard } from './';
 
 class CryptoContainer extends Component {
   componentDidMount(){
@@ -12,9 +12,6 @@ class CryptoContainer extends Component {
 
   renderCoinCards() {
     const { crypto } = this.props;
-
-    console.log(crypto.data, 'inside the render function')
-
     if (crypto.isFetching) {
       return(
         <View>
@@ -45,6 +42,7 @@ class CryptoContainer extends Component {
 
     return(
       <ScrollView style={contentContainer}>
+        <SwitchChat />
         {this.renderCoinCards()}
       </ScrollView>
     )
