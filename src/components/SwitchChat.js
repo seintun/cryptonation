@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 
-const SwitchChat = () => {
-  return(
-    <View style={ switchChatContainer }>
-      <TextInput 
-        style= { switchChatText }
-        placeholder= 'Enter your name'
-      />
-    </View>
-  )
+class SwitchChat extends Component {
+  render(){
+    return(
+      <View style={ switchChatContainer }>
+        <TextInput 
+          style= { switchChatText }
+          placeholder= 'Enter your name'
+          value=''
+        />
+      </View>
+    )
+  }
 };
 
 const styles = StyleSheet.create({
